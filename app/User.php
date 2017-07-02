@@ -10,12 +10,18 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * The model setting.
+     */
+    protected $table = 'm_user';
+    public $primaryKey = 'id_user';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nik', 'nama', 'email', 'password',
     ];
 
     /**
