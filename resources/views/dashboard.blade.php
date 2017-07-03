@@ -6,7 +6,7 @@
     {{-- container --}}
     <div class="container">
       <!-- Content Header (Page header) -->
-      <img style="margin-top: 10px; margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
+      <img style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
 
       <!-- Main content -->
       <section class="content">

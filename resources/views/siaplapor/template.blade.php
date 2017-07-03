@@ -41,7 +41,7 @@
     <!-- Logo -->
     <a href="{{url('admin/')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">SLA</span>
+      <span class="logo-mini"><img src="{{asset('assets/dist/img/bigoss/siaplapor.png')}}" style="width: 50px; height: 50px;"></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>SIAP</b>Lapor</span>
     </a>
@@ -78,30 +78,6 @@
             <i class="fa fa-dashboard"></i> <span>Antrian Online</span>
           </a>
         </li>
-        <li class="header">MASTER DATA</li>
-        <li id="admin-menu">
-          <a href="{{url('admin/admin')}}">
-            <i class="fa fa-users"></i> <span>Admin</span>
-          </a>
-        </li>
-        <li id="izin-menu">
-          <a href="{{url('admin/izin')}}">
-            <i class="fa fa-file-text"></i> <span>Izin</span>
-          </a>
-        </li>
-        <li id="layanan-menu">
-          <a href="{{url('admin/layanan')}}">
-            <i class="fa fa-server"></i> <span>Layanan</span>
-          </a>
-        </li>
-
-        <li class="header">ANTRIAN ONLINE</li>
-        <li id="loket-menu">
-          <a href="{{url('admin/loket')}}">
-            <i class="fa fa-desktop"></i> <span>Loket</span>
-          </a>
-        </li>
-
         <li class="header">OPTION</li>
         <li>
           <a href="{{ url('logout')}}"
@@ -123,9 +99,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+      <b>Version</b> 1.0 (Beta)
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2017</strong> All rights
     reserved.
   </footer>
 </div>
