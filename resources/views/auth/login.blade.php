@@ -28,12 +28,12 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="#"><b>BIGOSS</b><br>
-    <h4>SIAPLapor dan Antrean Online</h5>
+    <h4>SIAPLapor dan Antrian Online</h4>
     </a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Login untuk masuk.</p>
+    <p class="login-box-msg">Silahkan melakukan Login</p>
 
     <form id="form" method="POST" action="{{ route('login') }}">
       {{ csrf_field() }}

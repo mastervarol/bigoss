@@ -2,11 +2,11 @@
 
 @section('content')
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-color: #101E3B; border-left: 0px">
     {{-- container --}}
     <div class="container">
       <!-- Content Header (Page header) -->
-      <img style="margin-top: 10px; margin-left: auto; margin-right: auto" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
+      <img style="margin-top: 10px; margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
 
       <!-- Main content -->
       <section class="content">
@@ -19,12 +19,12 @@
                 <img src="{{asset('assets/dist/img/bigoss/siaplapor.png')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username">SIAPLapor</h3>
-              <h5 class="widget-user-desc">Pengaduan Layanan Penanaman Modal</h5>
+              <h3 class="widget-user-username"><b>SIAPLapor</b></h3>
+              <h5 class="widget-user-desc">Sistem Informasi Advokasi Pengaduan dan Pelaporan</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
-                <li><a href="{{url('siaplapor')}}" style="text-align: center;">Layangkan aduan <i class="fa fa-arrow-circle-right"></i></a></li>
+                <li><a href="{{url('siaplapor')}}" style="text-align: center;">Punya Keluhan? Klik Disini! <i class="fa fa-arrow-circle-right"></i></a></li>
               </ul>
             </div>
           </div>
@@ -40,12 +40,12 @@
                 <img src="{{asset('assets/dist/img/bigoss/antrianonline.png')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username">Antrian Online</h3>
-              <h5 class="widget-user-desc">Antrian Layanan Penanaman Modal</h5>
+              <h3 class="widget-user-username"><b>Antrian Online</b></h3>
+              <h5 class="widget-user-desc">Antrian Layanan Konsultasi Izin</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
-                <li><a href="{{url('antrianonline')}}" style="text-align: center;">Ayo mengantri <i class="fa fa-arrow-circle-right"></i></a></li>
+                <li><a href="{{url('antrianonline')}}" style="text-align: center;">Mau Ngurus Izin? Yuk Ngantri! <i class="fa fa-arrow-circle-right"></i></a></li>
               </ul>
             </div>
           </div>

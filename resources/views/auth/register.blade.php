@@ -28,12 +28,12 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="#"><b>BIGOSS</b><br>
-    <h4>SIAPLapor dan Antrean Online</h5>
+    <h4>SIAPLapor dan Antrian Online</h4>
     </a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Form Pendaftaran Baru</p>
+    <p class="login-box-msg">Lengkapi Data Anda</p>
 
     <form id="form" method="POST" action="{{ route('register') }}">
       {{ csrf_field() }}
@@ -92,7 +92,7 @@
         </div> --}}
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Daftar Baru</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Daftar </button>
         </div>
         <!-- /.col -->
       </div>
@@ -100,7 +100,7 @@
 
     <div class="social-auth-links text-center">
       <p>- Atau -</p>
-      <a href="{{ route('login') }}" class="btn btn-block btn-success btn-flat"></i> Sudah Memiliki Akun</a>
+      <a href="{{ route('login') }}" class="btn btn-block btn-success btn-flat"></i> Sudah Punya Akun? </a>
     </div>
     <!-- /.social-auth-links -->
   </div>
