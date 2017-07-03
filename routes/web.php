@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('login');
+Route::get('/', 'DashboardController@index');
+
+Route::group(['prefix' => 'antrianonline', 'middleware' => ['auth']], function () {
+	Route::get('/', 'DashboardController@indexantrian');
+});
+
+Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
+	Route::get('/', 'DashboardController@indexsiaplapor');
 });
 
 Auth::routes();

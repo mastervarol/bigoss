@@ -38,7 +38,7 @@
     <form id="form" method="POST" action="{{ route('register') }}">
       {{ csrf_field() }}
       <div class="form-group has-feedback {{ $errors->has('nik') ? ' has-error' : '' }}">
-        <input id="number" type="nik" class="form-control" placeholder="nik" name="nik" value="{{ old('nik') }}" required autofocus>
+        <input id="number" type="nik" class="form-control" placeholder="nik" name="nik" value="{{ old('nik') }}" required autofocus maxlength="16">
         <span class="glyphicon glyphicon-credit-card form-control-feedback"></span>
         @if ($errors->has('nik'))
             <span class="help-block">
