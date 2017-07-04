@@ -32,4 +32,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function antrian()
+    {
+        return $this->hasMany('App\Antrian', 'id_user');
+    }
 }

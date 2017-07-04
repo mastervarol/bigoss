@@ -27,8 +27,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
-    <h4>Bali Investment Gateway Online Service System</h4>
+    <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

@@ -2,11 +2,11 @@
 
 @section('content')
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style="background-color: #101E3B; border-left: 0px">
+  <div class="content-wrapper" style="background-color: #1C1328; border-left: 0px">
     {{-- container --}}
     <div class="container">
       <!-- Content Header (Page header) -->
-      <img style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}">
+      <img style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-public.png')}}">
 
       <!-- Main content -->
       <section class="content">
