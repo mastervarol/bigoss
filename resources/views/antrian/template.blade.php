@@ -78,6 +78,13 @@
             <i class="fa fa-dashboard"></i> <span>SIAPLapor</span>
           </a>
         </li>
+
+        <li class="header">MENU ANTRIAN ONLINE</li>
+        <li id="dashboard-menu">
+          <a href="{{url('antrianonline/pendaftaran')}}">
+            <i class="fa fa-dashboard"></i> <span>Pendaftaran Online</span>
+          </a>
+        </li>
         
         <li class="header">OPTION</li>
         <li>

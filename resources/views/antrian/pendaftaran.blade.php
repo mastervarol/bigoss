@@ -86,6 +86,8 @@
       layanan = $('#layanan');
       loket = $('#loket');
       waktu = $('#waktu');
+
+      setlayanan();
     });
 
     function setlayanan()
@@ -103,6 +105,7 @@
         });
       }, "json" ).done(function() {
         loadingcontainer.html("");
+        setloket();
       });
     }
 
@@ -121,6 +124,7 @@
         });
       }, "json" ).done(function() {
         loadingcontainer.html("");
+        setwaktu();
       });
     }
 
@@ -134,8 +138,8 @@
         $.each(data, function(key, value) {   
           waktu
             .append($("<option></option>")
-            .attr("value",value.waktu)
-            .text(value.waktu));
+            .attr("value",value)
+            .text(value));
         });
       }, "json" ).done(function() {
         loadingcontainer.html("");
