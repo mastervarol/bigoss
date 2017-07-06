@@ -61,7 +61,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{asset('assets/dist/img/logo.png')}}" class="img" alt="User Image">
+          <img src="{{asset('assets/dist/img/user2-160x160b.jpg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>{{Auth::user()->nama}}</p>
@@ -80,9 +80,14 @@
         </li>
 
         <li class="header">MENU ANTRIAN ONLINE</li>
-        <li id="dashboard-menu">
+        <li id="pendaftaran-menu">
           <a href="{{url('antrianonline/pendaftaran')}}">
             <i class="fa fa-dashboard"></i> <span>Pendaftaran Online</span>
+          </a>
+        </li>
+        <li id="riwayat-menu">
+          <a href="{{url('antrianonline/riwayat')}}">
+            <i class="fa fa-dashboard"></i> <span>Riwayat Antrian</span>
           </a>
         </li>
         

@@ -27,9 +27,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>BIGOSS</b><br>
-    <h4>SIAPLapor dan Antrian Online</h4>
-    </a>
+    <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

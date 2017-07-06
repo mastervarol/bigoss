@@ -20,7 +20,7 @@
               </div>
               <!-- /.widget-user-image -->
               <h3 class="widget-user-username"><b>SIAPLapor</b></h3>
-              <h5 class="widget-user-desc">Sistem Informasi Advokasi Pengaduan dan Pelaporan</h5>
+              <h5 class="widget-user-desc">Sistem Informasi Aspirasi Pengaduan dan Pelaporan</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">

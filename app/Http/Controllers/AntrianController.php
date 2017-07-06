@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
+use Session;
+use Auth;
 use App\Izin;
 use App\Layanan;
 use App\Antrian;
@@ -19,6 +22,41 @@ class AntrianController extends Controller
         return view('antrian.pendaftaran')->with(array(
         	'izins' => $izins
         	));
+    }
+
+    public function storependaftaran(Request $request)
+    {
+        $userlogin = Auth::user();
+        $layanan = Layanan::find($request->layanan);
+        $loket = Loket::find($request->loket);
+
+        $antrian = new Antrian();
+        $antrian->pemohon()->associate($userlogin);
+        $antrian->loket()->associate($loket);
+        $antrian->layanan()->associate($layanan);
+
+        //set tanggal antrian
+        $jamantri = explode(':', $request->waktu);
+
+        $tglantri = Carbon::now('Asia/Makassar');
+        $tglantri->addDay();
+        $tglantri->hour = $jamantri[0];
+        $tglantri->minute = $jamantri[1];
+        $tglantri->second = 0;
+
+        $antrian->tgl = $tglantri;
+        $antrian->save();
+
+        return "pendaftaran berhasil...";
+    }   
+
+    public function riwayat()
+    {
+        $antrians = Antrian::with('loket', 'layanan', 'layanan.izin')->get();
+
+        return view('antrian.riwayat')->with(array(
+            'antrians' => $antrians
+            ));
     }
 
     //ajax

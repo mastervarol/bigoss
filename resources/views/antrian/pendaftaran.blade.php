@@ -13,7 +13,7 @@
     <!-- Main content -->
     <section class="content">
       <!-- Default box -->
-      {!! Form::open(array('url' => url('admin/pendaftaran'), 'role' => 'form', 'method' => 'POST')) !!}
+      {!! Form::open(array('url' => url('antrianonline/pendaftaran'), 'role' => 'form', 'method' => 'POST')) !!}
         <div class="row">
           <div class="col-md-12">
             <div class="box box-success">
@@ -79,7 +79,7 @@
 
     $(function () {
       //active tree and menu
-      $('#dashboard-menu').addClass('active');
+      $('#pendaftaran-menu').addClass('active');
     
       loadingcontainer = $('#loadingcontainer');
       izin = $('#izin');

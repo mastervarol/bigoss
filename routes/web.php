@@ -16,6 +16,8 @@ Route::get('/', 'DashboardController@index');
 Route::group(['prefix' => 'antrianonline', 'middleware' => ['auth']], function () {
 	Route::get('/', 'DashboardController@indexantrian');
 	Route::get('/pendaftaran', 'AntrianController@pendaftaran');
+	Route::post('/pendaftaran', 'AntrianController@storependaftaran');
+	Route::get('/riwayat', 'AntrianController@riwayat');
 
 	//ajax
 	Route::get('/ajax_layanan/{idizin}', 'AntrianController@ajax_layanan');
