@@ -1,12 +1,12 @@
 @extends('antrian.template')
-
 @section('content')
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Pendaftaran Antrian
+        Pendaftaran Antrian ({{$tglantri->formatLocalized("%A")}}, {{$tglantri->toDateString()}})
       </h1>
     </section>
 
@@ -15,10 +15,43 @@
       <!-- Default box -->
       {!! Form::open(array('url' => url('antrianonline/pendaftaran'), 'role' => 'form', 'method' => 'POST')) !!}
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="box box-success">
+              <div class="box-header with-border">
+                <h3 class="box-title">Ketentuan Antrian Online</h3>
+
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+              <!-- /.box-header -->
               <div class="box-body">
-                <!-- select -->
+                <ol type="1">
+                  <li>Pemohon antrian online agar memilih izin, layanan, dan nomor antrian dengan benar.</li><br>
+                  <li>Setiap pemohon hanya dapat mendaftarkan :<br>-  1 nomor antrian dalam 1 hari dan <br>-  3 nomor antrian dalam 1 minggu</li><br>
+                  <li>Waktu pemohon antrian dibuka pada pukul 01:00 – 23:00 WIB, untuk digunakan pada esok harinya.</li><br>
+                  <li>Layanan dibuka untuk hari kerja (senin - jumat). pendaftaran antrian yang dilakukan pada hari jumat-minggu otomatis mendapat layanan pada hari senin.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box box-success">
+              <div class="box-header with-border">
+                <h3 class="box-title">Formulir Antrian Online</h3>
+
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+              @if($antrian == null)  
+              <!-- select -->
                 <div class="form-group">
                   <label class="control-label" for="izin">1. Pilih perizinan yang diinginkan</label>
                   <select class="form-control" id="izin" name="izin" onchange="setlayanan()">
@@ -47,7 +80,7 @@
 
                 <!-- select -->
                 <div class="form-group">
-                  <label class="control-label" for="waktu">3. Pilih waktu antrian berdasarkan loket</label>
+                  <label class="control-label" for="waktu">4. Pilih waktu antrian berdasarkan loket</label>
                   <select class="form-control" id="waktu" name="waktu">
                   </select>
                 </div>
@@ -61,6 +94,9 @@
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary pull-right">Daftarkan Antrian</button>
               </div>
+              @else
+              <h2>Anda sudah melakukan antrian</h2>
+              @endif
             </div>
           </div>
         </div>

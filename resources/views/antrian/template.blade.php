@@ -80,6 +80,11 @@
         </li>
 
         <li class="header">MENU ANTRIAN ONLINE</li>
+        <li id="beranda-menu">
+          <a href="{{url('antrianonline/')}}">
+            <i class="fa fa-dashboard"></i> <span>Beranda</span>
+          </a>
+        </li>
         <li id="pendaftaran-menu">
           <a href="{{url('antrianonline/pendaftaran')}}">
             <i class="fa fa-dashboard"></i> <span>Pendaftaran Online</span>
