@@ -66,7 +66,7 @@
         <div class="pull-left info">
           <p>{{Auth::user()->nama}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> 
-            
+            {{Auth::user()->email}}
           </a>
         </div>
       </div>
@@ -76,6 +76,22 @@
         <li id="dashboard-menu">
           <a href="{{url('antrianonline')}}">
             <i class="fa fa-dashboard"></i> <span>Antrian Online</span>
+          </a>
+        </li>
+        <li class="header">MENU SIAPLAPOR</li>
+        <li id="beranda-menu">
+          <a href="{{url('siaplapor')}}">
+            <i class="fa fa-dashboard"></i> <span>Beranda</span>
+          </a>
+        </li>
+        <li id="lapor-menu">
+          <a href="{{url('siaplapor/pelaporan')}}">
+            <i class="fa fa-dashboard"></i> <span>Laporkan Pelayanan</span>
+          </a>
+        </li>
+        <li id="lapor-menu">
+          <a href="{{url('siaplapor/laporansaya')}}">
+            <i class="fa fa-dashboard"></i> <span>Laporan Saya</span>
           </a>
         </li>
         <li class="header">OPTION</li>

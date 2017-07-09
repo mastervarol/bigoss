@@ -66,7 +66,7 @@
         <div class="pull-left info">
           <p>{{Auth::user()->nama}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> 
-            
+            {{Auth::user()->email}}
           </a>
         </div>
       </div>

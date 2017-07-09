@@ -29,6 +29,11 @@ Route::group(['prefix' => 'antrianonline', 'middleware' => ['auth']], function (
 
 Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
 	Route::get('/', 'DashboardController@indexsiaplapor');
+
+	Route::get('/pelaporan', 'LaporanController@pelaporan');
+	Route::post('/pelaporan', 'LaporanController@storepelaporan');
+
+	Route::get('/laporansaya', 'LaporanController@laporansaya');
 });
 
 Auth::routes();
