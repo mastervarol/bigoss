@@ -2,11 +2,12 @@
 
 @section('content')
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style="background-color: #1C1328; border-left: 0px">
+  <div class="content-wrapper" style="border-left: 0px; 
+  background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url('{{asset('assets/dist/img/bgkayu.jpg')}}')">
     {{-- container --}}
     <div class="container">
       <!-- Content Header (Page header) -->
-      <img style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive hidden-sm hidden-xs" src="{{asset('assets/dist/img/bigoss/bigoss-public.png')}}">
+      <img style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">
 
       <!-- Main content -->
       <section class="content">
@@ -16,7 +17,7 @@
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-blue">
               <div class="widget-user-image">
-                <img src="{{asset('assets/dist/img/bigoss/siaplapor.png')}}" alt="User Avatar">
+                <img src="{{asset('assets/dist/img/bigoss/icon-siaplapor.png')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
               <h3 class="widget-user-username"><b>SIAPLapor</b></h3>
@@ -35,9 +36,9 @@
           <!-- Widget: user widget style 1 -->
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-green">
+            <div class="widget-user-header bg-red">
               <div class="widget-user-image">
-                <img src="{{asset('assets/dist/img/bigoss/antrianonline.png')}}" alt="User Avatar">
+                <img src="{{asset('assets/dist/img/bigoss/icon-antrian.png')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
               <h3 class="widget-user-username"><b>Antrian Online</b></h3>
@@ -46,6 +47,72 @@
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
                 <li><a href="{{url('antrianonline')}}" style="text-align: center;">Mau Ngurus Izin? Yuk Ngantri! <i class="fa fa-arrow-circle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.widget-user -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-6">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-black">
+              <div class="widget-user-image">
+                <img src="{{asset('assets/dist/img/bigoss/icon-undagi.png')}}" alt="User Avatar">
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username"><b>UNDAGI</b></h3>
+              <h5 class="widget-user-desc">Unit Desain Arsitektur Gratis</h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="{{url('antrianonline')}}" style="text-align: center;">Dapatkan desain rumahmu GRATIS!! <i class="fa fa-arrow-circle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.widget-user -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-6">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-green">
+              <div class="widget-user-image">
+                <img src="{{asset('assets/dist/img/bigoss/bkpm.jpg')}}" alt="User Avatar">
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username"><b>BKPM SPIPISIE</b></h3>
+              <h5 class="widget-user-desc">Aplikasi SPIPISIE</h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="online-spipise.bkpm.go.id" style="text-align: center;">Gunakan SPIPISIE <i class="fa fa-arrow-circle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.widget-user -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-6">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-blue">
+              <div class="widget-user-image">
+                <img src="{{asset('assets/dist/img/logobadung.png')}}" alt="User Avatar">
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username"><b>SIMPONIE</b></h3>
+              <h5 class="widget-user-desc">Sistem Informasi Manajemen Perizinan Online</h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="http://simponie.badungkab.go.id/simponiebadungkab/" style="text-align: center;">Gunakan SIMPONIE <i class="fa fa-arrow-circle-right"></i></a></li>
               </ul>
             </div>
           </div>

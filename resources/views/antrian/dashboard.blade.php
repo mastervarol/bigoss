@@ -20,6 +20,7 @@
       </div>
       <!-- /info alert -->
       @endif
+      @if(Auth::user() != null)
       <div class="col-md-4">
         <div class="box box-warning box-solid">
           <div class="box-header with-border">
@@ -75,6 +76,80 @@
           <!-- /.box-body -->
         </div>
         <!-- /.box -->
+      </div>
+      @endif
+      <div class="col-md-4">
+        <!-- Info Boxes Style 2 -->
+        <div class="info-box bg-yellow">
+          <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Antrian Tersisa Hari Ini</span>
+            <span class="info-box-number">30</span>
+
+            <div class="progress">
+              <div class="progress-bar" style="width: 50%"></div>
+            </div>
+            <span class="progress-description">
+                  30/60 nomor antrian telah dilayani
+                </span>
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+        <div class="info-box bg-green">
+          <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Jumlah Loket Beroperasi</span>
+            <span class="info-box-number">4</span>
+
+            {{-- <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+            <span class="progress-description">
+                  20% Increase in 30 Days
+                </span> --}}
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+      <div class="col-md-4">
+        <div class="info-box bg-red">
+          <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Antrian Tersisa Besok</span>
+            <span class="info-box-number">45</span>
+
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <span class="progress-description">
+                  45 dari 60 nomor antrian 
+                </span>
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+        <div class="info-box bg-aqua">
+          <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Jumlah Layanan</span>
+            <span class="info-box-number">4 Layanan</span>
+
+            {{-- <div class="progress">
+              <div class="progress-bar" style="width: 40%"></div>
+            </div>
+            <span class="progress-description">
+                  40% Increase in 30 Days
+                </span> --}}
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
       </div>
     </section>
     <!-- /.content -->

@@ -41,9 +41,9 @@
     <!-- Logo -->
     <a href="{{url('admin/')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><img src="{{asset('assets/dist/img/bigoss/siaplapor.png')}}" style="width: 50px; height: 50px;"></span>
+      <span class="logo-mini"><img src="{{asset('assets/dist/img/bigoss/icon-siaplapor.png')}}" style="width: 40px; height: 40px;"></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SIAP</b>Lapor</span>
+      <span class="logo-lg"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 40px;"></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -59,6 +59,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
+      @if(Auth::user() != null)
       <div class="user-panel">
         <div class="pull-left image">
           <img src="{{asset('assets/dist/img/user2-160x160b.jpg')}}" class="img-circle" alt="User Image">
@@ -70,12 +71,13 @@
           </a>
         </div>
       </div>
+      @endif
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MENU BIGOSS</li>
-        <li id="dashboard-menu">
-          <a href="{{url('antrianonline')}}">
-            <i class="fa fa-dashboard"></i> <span>Antrian Online</span>
+        <li class="header">Portal BIGOSS</li>
+        <li>
+          <a href="{{url('')}}">
+            <i class="fa fa-arrow-left"></i> <span>BIGOSS</span>
           </a>
         </li>
         <li class="header">MENU SIAPLAPOR</li>
@@ -84,6 +86,7 @@
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
+        @if(Auth::user() != null)
         <li id="lapor-menu">
           <a href="{{url('siaplapor/pelaporan')}}">
             <i class="fa fa-dashboard"></i> <span>Laporkan Pelayanan</span>
@@ -94,7 +97,9 @@
             <i class="fa fa-dashboard"></i> <span>Laporan Saya</span>
           </a>
         </li>
+        @endif  
         <li class="header">OPTION</li>
+        @if(Auth::user() != null)
         <li>
           <a href="{{ url('logout')}}"
               onclick="event.preventDefault();
@@ -106,6 +111,13 @@
               {{ csrf_field() }}
           </form>
         </li>
+        @else
+        <li id="riwayat-menu">
+          <a href="{{url('login')}}">
+            <i class="fa fa-user"></i> <span>Login</span>
+          </a>
+        </li>
+        @endif
       </ul>
     </section>
     <!-- /.sidebar -->

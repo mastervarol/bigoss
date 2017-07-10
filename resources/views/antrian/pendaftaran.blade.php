@@ -80,7 +80,7 @@
 
                 <!-- select -->
                 <div class="form-group">
-                  <label class="control-label" for="waktu">4. Pilih waktu antrian berdasarkan loket</label>
+                  <label class="control-label" for="waktu" id="label-waktu">4. Pilih waktu antrian berdasarkan loket</label>
                   <select class="form-control" id="waktu" name="waktu">
                   </select>
                 </div>
@@ -151,13 +151,15 @@
       loket.empty();
 
       $.get("{{url('antrianonline/ajax_loket')}}/" + layanan.val(), function( data ) {
-
+        
         $.each(data, function(key, value) {   
           loket
             .append($("<option></option>")
             .attr("value",value.id_loket)
             .text(value.loket));
+          
         });
+        
       }, "json" ).done(function() {
         loadingcontainer.html("");
         setwaktu();
@@ -170,13 +172,18 @@
       waktu.empty();
 
       $.get("{{url('antrianonline/ajax_waktu')}}/" + loket.val(), function( data ) {
-
-        $.each(data, function(key, value) {   
+        
+        var jumlah = 0;
+        
+        $.each(data.antriantersedia, function(key, value) {   
           waktu
-            .append($("<option></option>")
+            .append($('<option style="font-size: 12pt"></option>')
             .attr("value",value)
             .text(value));
+          jumlah++;  
         });
+
+        $('#label-waktu').html('4. Pilih waktu antrian berdasarkan loket (tersisa: ' + jumlah + ' nomor)')
       }, "json" ).done(function() {
         loadingcontainer.html("");
       });

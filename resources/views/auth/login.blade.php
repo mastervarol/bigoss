@@ -24,13 +24,16 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url('{{asset('assets/dist/img/bgkayu.jpg')}}')">
 <div class="login-box">
-  <div class="login-logo">
-    <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">
-  </div>
+  {{-- <div class="login-logo">
+    
+  </div> --}}
   <!-- /.login-logo -->
   <div class="login-box-body">
+    <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">
+    <br>
+    <br>
     <p class="login-box-msg">Silahkan melakukan Login</p>
 
     <form id="form" method="POST" action="{{ route('login') }}">

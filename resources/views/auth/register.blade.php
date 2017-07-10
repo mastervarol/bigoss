@@ -24,7 +24,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url('{{asset('assets/dist/img/bgkayu.jpg')}}')">
 <div class="login-box">
   <div class="login-logo">
     <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="{{asset('assets/dist/img/bigoss/bigoss-admin.png')}}">

@@ -188,7 +188,9 @@ class AntrianController extends Controller
             }
         }
 
+        $data['layanan'] = $layanan;
+        $data['antriantersedia'] = $antriantersedia;
         //return Carbon::today()->addDay();
-        return json_encode($antriantersedia);
+        return json_encode($data);
     }
 }

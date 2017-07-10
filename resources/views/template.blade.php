@@ -33,22 +33,22 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-black-light layout-top-nav">
+<body class="hold-transition skin-black-light layout-top-nav" >
 <div class="wrapper">
 
-  <header class="main-header">
+  {{-- <header class="main-header">
     <nav class="navbar navbar-static-top hidden-md hidden-lg" style="background-color: #F5F5F5">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand"><img class="img-responsive" style="height: 25px" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}"></a>
-          {{-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <a href="#" class="navbar-brand"><img class="img-responsive" style="height: 25px" src="{{asset('assets/dist/img/bigoss/header-merah.png')}}"></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
-          </button> --}}
+          </button>
         </div>
       </div>
       <!-- /.container-fluid -->
     </nav>
-  </header>
+  </header> --}}
 
   @yield('content')
 

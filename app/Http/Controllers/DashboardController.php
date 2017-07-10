@@ -19,17 +19,25 @@ class DashboardController extends Controller
 
     public function indexantrian()
     {
-        $antrian = Antrian::with('pemohon', 'loket', 'layanan', 'layanan.izin')
+        if(Auth::user() != null)
+        {
+            $antrian = Antrian::with('pemohon', 'loket', 'layanan', 'layanan.izin')
             ->where('status', 1)
             ->where('id_user', Auth::user()->id_user)
             ->where(DB::raw('date(tgl)'), '<=', Carbon::today()->addDay())
             ->first();
 
-        //return json_encode($antrian);
-
-        return view('antrian.dashboard')->with(array(
+            //return json_encode($antrian);
+            return view('antrian.dashboard')->with(array(
             'antrian' => $antrian
             ));
+        }
+        else
+        {
+            return view('antrian.dashboard')->with(array(
+            'antrian' => null
+            ));
+        }
     }
 
     public function indexsiaplapor()
