@@ -309,7 +309,7 @@
                 <table cellpadding="0" cellspacing="0" width="600" class="w320">
                   <tr>
                     <td style="vertical-align: middle; margin-left: auto; margin-right: auto;">
-                      <a href=""><img height="47" src="{{asset('assets/dist/img/bigoss/bigoss-merah.png')}}" alt="logo"></a>
+                      <a href=""><img height="47" src="{{asset('assets/dist/img/bigoss/header-merah.png')}}" alt="logo"></a>
                     </td>
                     {{-- <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
                       <a href=""><img width="44" height="47" src="http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gif" alt="twitter" /></a>
@@ -341,6 +341,7 @@
           <tr>
             <td class="free-text">
               Terima kasih telah menggunakan layanan antrian online kami.
+              <br>
               Ayo urus sendiri Izin anda. JANGAN PAKAI CALO!!!
             </td>
           </tr>
@@ -367,8 +368,11 @@
                       </tr>
                       <tr>
                         <td class="button">
-                          Harap Tidak memberikan TIP atau hadiah dalam bentuk apapun kepada Petugas Kami Untuk mewujudkan Pemerintah Kabupaten Badung yang Besih dan Bebas KKN.
+                          Harap tidak memberikan tip atau hadiah dalam bentuk apapun kepada petugas kami untuk mewujudkan Pemerintah Kabupaten Badung yang bersih dan bebas KKN.
                         </td>
+                      </tr>
+                      <tr>
+                        <td><img style="height: 100px" src="{{asset('assets/dist/img/stoppungli.jpg')}}" alt="logo"></td>
                       </tr>
                     </table>
                   </td>

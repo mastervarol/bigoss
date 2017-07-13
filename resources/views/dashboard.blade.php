@@ -15,7 +15,7 @@
           <!-- Widget: user widget style 1 -->
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-blue">
+            <div class="widget-user-header bg-yellow">
               <div class="widget-user-image">
                 <img src="{{asset('assets/dist/img/bigoss/icon-siaplapor.png')}}" alt="User Avatar">
               </div>
@@ -36,7 +36,7 @@
           <!-- Widget: user widget style 1 -->
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-red">
+            <div class="widget-user-header bg-blue">
               <div class="widget-user-image">
                 <img src="{{asset('assets/dist/img/bigoss/icon-antrian.png')}}" alt="User Avatar">
               </div>
@@ -80,17 +80,39 @@
           <!-- Widget: user widget style 1 -->
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-green">
+            <div class="widget-user-header bg-blue">
+              <div class="widget-user-image">
+                <img src="{{asset('assets/dist/img/logobadung.png')}}" alt="User Avatar">
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username"><b>SIMPONIE</b></h3>
+              <h5 class="widget-user-desc">Sistem Informasi Manajemen Perizinan Online </h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="http://simponie.badungkab.go.id/simponiebadungkab/" style="text-align: center;">Gunakan SIMPONIE (SIUP dan TDP) <i class="fa fa-arrow-circle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.widget-user -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-6">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-white">
               <div class="widget-user-image">
                 <img src="{{asset('assets/dist/img/bigoss/bkpm.jpg')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username"><b>BKPM SPIPISIE</b></h3>
-              <h5 class="widget-user-desc">Aplikasi SPIPISIE</h5>
+              <h3 class="widget-user-username"><b>BKPM SPIPISE</b></h3>
+              <h5 class="widget-user-desc">Sistem Pelayanan Informasi dan Perizinan Investasi Secara Elektronik</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
-                <li><a href="online-spipise.bkpm.go.id" style="text-align: center;">Gunakan SPIPISIE <i class="fa fa-arrow-circle-right"></i></a></li>
+                <li><a href="http://online-spipise.bkpm.go.id" style="text-align: center;">Gunakan SPIPISE (Izin Prinsip PMA dan PMDN) <i class="fa fa-arrow-circle-right"></i></a></li>
               </ul>
             </div>
           </div>
@@ -107,12 +129,12 @@
                 <img src="{{asset('assets/dist/img/logobadung.png')}}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username"><b>SIMPONIE</b></h3>
-              <h5 class="widget-user-desc">Sistem Informasi Manajemen Perizinan Online</h5>
+              <h3 class="widget-user-username"><b>SI MANIZ</b></h3>
+              <h5 class="widget-user-desc">Sistem Informasi Manajemen Perizinan</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
-                <li><a href="http://simponie.badungkab.go.id/simponiebadungkab/" style="text-align: center;">Gunakan SIMPONIE <i class="fa fa-arrow-circle-right"></i></a></li>
+                <li><a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/login.php?logout=logout" style="text-align: center;">Gunakan SI MANIZ (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB) <i class="fa fa-arrow-circle-right"></i></a></li>
               </ul>
             </div>
           </div>

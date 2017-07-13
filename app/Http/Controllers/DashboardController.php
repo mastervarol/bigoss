@@ -14,7 +14,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        return view('landing');
     }
 
     public function indexantrian()
@@ -54,7 +54,8 @@ class DashboardController extends Controller
     public function meong()
     {
         //Mail::to("dani.akbarr@gmail.com")->send(new TiketAntrian(new Antrian));
-        $antrian = Antrian::find(7);
+        $antrian = Antrian::find(11);
+        //return json_encode($antrian);
         return view('email.email1')->with('antrian', $antrian);
     }
 }
