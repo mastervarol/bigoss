@@ -178,8 +178,8 @@
         $.each(data.antriantersedia, function(key, value) {   
           waktu
             .append($('<option style="font-size: 12pt"></option>')
-            .attr("value",value)
-            .text(value));
+            .attr("value",value.jammulai)
+            .text(value.jammulai + " - " + value.jamselesai));
           jumlah++;  
         });
 

@@ -167,14 +167,47 @@ class AntrianController extends Controller
             ->where('id_loket', $idloket)
             ->get();
 
-        $antriantersedia = array();
+        //batasi senin - kamis jam 08.00-11.30 (3 jam 30 menit) dan 12.15-15.00 (2 jam 45 menit)
+        //batasi jumat jam 08.00-11.30 (3 jam 30 menit)
+        //cek hari jika senin - kamis / jumat
+        if($tglantri->dayOfWeek < 5)
+        {
+            //berarti senin - kamis
+            $jammulaiistirahat = (clone $tglantri);
+            $jamselesaiistirahat = (clone $tglantri);
 
+            $jammulaiistirahat->hour = 11;
+            $jammulaiistirahat->minute = 30;
+            $jamselesaiistirahat->hour = 12;
+            $jamselesaiistirahat->minute = 15;
+        }
+        else
+        {
+            //berarti jumat   
+            $jammulaiistirahat = (clone $tglantri);
+            $jamselesaiistirahat = (clone $tglantri);
+
+            $jammulaiistirahat->hour = 11;
+            $jammulaiistirahat->minute = 30;
+            $jamselesaiistirahat->hour = 12;
+            $jamselesaiistirahat->minute = 15;
+        }
+
+        $antriantersedia = array();
         for ($i=0; $i < $layanan->kuota_harian; $i++) { 
             if($i == 0)
             {
                 if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
                 {
-                    $antriantersedia[] = $jammulai->format('G:i');
+                    $jamselesai = (clone $jammulai);
+                    $jamselesai->addMinutes($layanan->durasi_layanan);
+                    
+                    if(!$jammulai->between($jammulaiistirahat, $jamselesaiistirahat) 
+                        && !$jamselesai->between($jammulaiistirahat, $jamselesaiistirahat))
+                    {
+                        $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                        $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');
+                    }
                 }
             }
             else
@@ -183,7 +216,15 @@ class AntrianController extends Controller
                 
                 if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
                 {
-                    $antriantersedia[] = $jammulai->format('G:i');
+                    $jamselesai = (clone $jammulai);
+                    $jamselesai->addMinutes($layanan->durasi_layanan);
+                    
+                    if(!$jammulai->between($jammulaiistirahat, $jamselesaiistirahat) 
+                        && !$jamselesai->between($jammulaiistirahat, $jamselesaiistirahat))
+                    {
+                        $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                        $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');
+                    }
                 }
             }
         }
