@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TiketAntrian;
+use Illuminate\Support\Facades\Log;
 
 class AntrianController extends Controller
 {
@@ -173,57 +174,107 @@ class AntrianController extends Controller
         if($tglantri->dayOfWeek < 5)
         {
             //berarti senin - kamis
-            $jammulaiistirahat = (clone $tglantri);
-            $jamselesaiistirahat = (clone $tglantri);
+            $sesi1mulai = (clone $tglantri);
+            $sesi1selesai = (clone $tglantri);
+            $sesi2mulai = (clone $tglantri);
+            $sesi2selesai = (clone $tglantri);
 
-            $jammulaiistirahat->hour = 11;
-            $jammulaiistirahat->minute = 30;
-            $jamselesaiistirahat->hour = 12;
-            $jamselesaiistirahat->minute = 15;
+            $sesi1mulai->hour = 8;
+            $sesi1mulai->minute = 00;
+            $sesi1selesai->hour = 11;
+            $sesi1selesai->minute = 30;
+
+            $sesi2mulai->hour = 12;
+            $sesi2mulai->minute = 15;
+            $sesi2selesai->hour = 15;
+            $sesi2selesai->minute = 0;
         }
         else
         {
-            //berarti jumat   
-            $jammulaiistirahat = (clone $tglantri);
-            $jamselesaiistirahat = (clone $tglantri);
-
-            $jammulaiistirahat->hour = 11;
-            $jammulaiistirahat->minute = 30;
-            $jamselesaiistirahat->hour = 12;
-            $jamselesaiistirahat->minute = 15;
+            //berarti jumat
+            $sesi1mulai = (clone $tglantri);
+            $sesi1selesai = (clone $tglantri);
+            
+            $sesi1mulai->hour = 8;
+            $sesi1mulai->minute = 00;
+            $sesi1selesai->hour = 11;
+            $sesi1selesai->minute = 30;
         }
+
+        $awalsesi = true;
 
         $antriantersedia = array();
         for ($i=0; $i < $layanan->kuota_harian; $i++) { 
-            if($i == 0)
+            if($awalsesi)
             {
                 if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
                 {
                     $jamselesai = (clone $jammulai);
                     $jamselesai->addMinutes($layanan->durasi_layanan);
-                    
-                    if(!$jammulai->between($jammulaiistirahat, $jamselesaiistirahat) 
-                        && !$jamselesai->between($jammulaiistirahat, $jamselesaiistirahat))
-                    {
-                        $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
-                        $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');
-                    }
+                    $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                    $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');
                 }
+
+                $awalsesi = false;
+
+                //Log::info('meong awal');
             }
             else
             {
-                $jammulai->addMinutes($layanan->durasi_layanan);
-                
-                if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
+                //check sesi
+                if($tglantri->dayOfWeek < 5)
                 {
+                    $jammulai->addMinutes($layanan->durasi_layanan);
                     $jamselesai = (clone $jammulai);
                     $jamselesai->addMinutes($layanan->durasi_layanan);
                     
-                    if(!$jammulai->between($jammulaiistirahat, $jamselesaiistirahat) 
-                        && !$jamselesai->between($jammulaiistirahat, $jamselesaiistirahat))
+                    if($jammulai->between($sesi1mulai, $sesi1selesai)
+                        && $jamselesai->between($sesi1mulai, $sesi1selesai))
                     {
-                        $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
-                        $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');
+                        if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
+                        {
+                            $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                            $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');    
+                        }
+
+                        //Log::info('meong senin kamis sesi 1');
+                    }
+                    elseif($jammulai->between($sesi1selesai, $sesi2mulai))
+                    {
+                        $jammulai->hour = 12;
+                        $jammulai->minute = 15;
+                        $awalsesi = true;
+
+                        //Log::info('meong senin kamis istirahat');
+                    }
+                    elseif($jammulai->between($sesi2mulai, $sesi2selesai)
+                        && $jamselesai->between($sesi2mulai, $sesi2selesai))
+                    {    
+                        if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
+                        {
+                            $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                            $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');    
+                        }
+
+                        //Log::info('meong senin kamis sesi 2');
+                    }
+                }
+                else
+                {
+                    $jammulai->addMinutes($layanan->durasi_layanan);
+                    $jamselesai = (clone $jammulai);
+                    $jamselesai->addMinutes($layanan->durasi_layanan);
+                            
+                    if($jammulai->between($sesi1mulai, $sesi1selesai)
+                        && $jamselesai->between($sesi1mulai, $sesi1selesai))
+                    {
+                        if(!$antrian->contains('tgl', $jammulai->toDateTimeString()))
+                        {
+                            $antriantersedia[$i]['jammulai'] = $jammulai->format('G:i');
+                            $antriantersedia[$i]['jamselesai'] = $jamselesai->format('G:i');    
+                        }
+
+                        //Log::info('meong jumat sesi 1');
                     }
                 }
             }

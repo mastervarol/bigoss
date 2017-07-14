@@ -50,7 +50,7 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-              @if($antrian == null)  
+              @if($antrian == null)
               <!-- select -->
                 <div class="form-group">
                   <label class="control-label" for="izin">1. Pilih perizinan yang diinginkan</label>
