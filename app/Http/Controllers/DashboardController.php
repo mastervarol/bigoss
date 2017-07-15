@@ -42,12 +42,10 @@ class DashboardController extends Controller
 
     public function indexsiaplapor()
     {
-        $laporan = Laporan::orderBy('created_at', 'desc')->get();
-        $tanggapan = Laporan::whereNotNull('published_by')->whereNotNull('tanggapan_by')->orderBy('created_at', 'desc')->get();
+        $laporans = Laporan::whereNotNull('published_by')->whereNotNull('tanggapan_by')->orderBy('created_at', 'desc')->get();
         
         return view('siaplapor.dashboard')->with(array(
-            'laporan' => $laporan,
-            'tanggapan' => $tanggapan
+            'laporans' => $laporans,
             ));
     }
 

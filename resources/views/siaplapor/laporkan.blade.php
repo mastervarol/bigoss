@@ -29,7 +29,8 @@
               <!-- /.box-header -->
               <div class="box-body">
                 <ol type="1">
-                  
+                  <li>Laporan anda akan di tanggapi oleh staff pengaduan dan pelaporan kami.</li><br>
+                  <li>Laporan anda akan di proses sesuai jam kerja.</li>
                 </ol>
               </div>
             </div>

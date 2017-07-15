@@ -25,6 +25,41 @@
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
+
+        <style>
+            .promo-block:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba(255,255,255,0);
+                background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,21,0,0.9) 90%, rgba(231,56,39,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(90%, rgba(255,21,0,0.9)), color-stop(100%, rgba(231,56,39,1)));
+                background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,21,0,0.9) 90%, rgba(231,56,39,1) 100%);
+                background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,21,0,0.9) 90%, rgba(231,56,39,1) 100%);
+                background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,21,0,0.9) 90%, rgba(231,56,39,1) 100%);
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,21,0,0.9) 90%, rgba(231,56,39,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e73827', GradientType=0 );
+                    content: " ";
+            }
+
+            .promo-block .promo-block-title {
+                padding-top: 10%; 
+                font-size: 120px;
+                color: #fff;
+                }
+
+            .top-btn{
+                margin-top: 10%;
+            }
+            .promo-block-text{
+                margin-top: 3%;
+                font-size: 80pt;
+            }
+            
+        </style>
     </head>
     <!-- END HEAD -->
 
@@ -44,10 +79,10 @@
                         </button>
 
                         <!-- Logo -->
-                        <div class="logo" style="width: 350px;">
-                            <a class="logo-wrap" href="#body">
-                                <img class="logo-img logo-img-main" src="{{asset('feassets/img/dpm3-putih.png')}}" alt="Asentus Logo" style="width: 350px;">
-                                <img class="logo-img logo-img-active" src="{{asset('feassets/img/dpm3-hitam.png')}}" alt="Asentus Logo" style="width: 350px;">
+                        <div class="logo img-responsive" style="max-width: 350px; width: 350px;">
+                            <a class="logo-wrap img-responsive" href="#body">
+                                <img class="logo-img logo-img-main img-responsive" src="{{asset('feassets/img/dpm4-putih.png')}}" alt="Asentus Logo" style="max-width: 350px; width: 350px;">
+                                <img class="logo-img logo-img-active img-responsive" src="{{asset('feassets/img/dpm4-hitam.png')}}" alt="Asentus Logo" style="max-width: 350px; width: 350px;">
                             </a>
                         </div>
                         <!-- End Logo -->
@@ -73,14 +108,20 @@
         <!--========== SLIDER ==========-->
         <div class="promo-block">
             <div class="container js_nav-item">
-                <div class="margin-b-40">
-                    <div class="typewriter">
-                    <img class="img-responsive" src="{{asset('feassets/img/bigoss-slide-putih.png')}}" style="margin-left: auto; margin-right: auto; max-height: 150px">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="">
+                            <div class="typewriter">
+                            <img class="img-responsive promo-block-title" src="{{asset('feassets/img/bigoss-slide-putih.png')}}" style="margin-left: auto; margin-right: auto; max-height: 300px">
+
+                            </div>
+                            <p class="promo-block-text">Satu Akses, Semua Layanan</p>
+                        </div>
                     </div>
-                    <br>
-                    <p class="promo-block-text">Satu Akses, Seluruh Layanan</p>
+                    <div class="col-md-4 top-btn">                
+                        <a class="btn-theme btn-theme-md btn-white-bg text-uppercase" style="box-shadow: 2px 2px 20px #888888;  border:5px solid #ccc;" href="#layanan" title="Intro Video"><i class="btn-icon icon-arrow-down"></i> Lihat Layanan</a>
+                    </div>
                 </div>
-                <a class="btn-theme btn-theme-md btn-white-bg text-uppercase" href="#layanan" title="Intro Video"><i class="btn-icon icon-arrow-down"></i> Lihat Layanan</a>
             </div>
         </div>
         <!--========== SLIDER ==========-->
@@ -118,11 +159,9 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/icon-siaplapor.png')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/siaplapor-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4>SIAPLapor</h4>
-                                    <h5>Sistem Informasi Aspirasi Pengaduan Dan Pelaporan</h5>
+                                <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Ajukan kritik dan saran anda kepada kami</p>
                                 </div>
                                 <a href="{{url('siaplapor')}}" class="content-wrapper-link"></a>    
@@ -131,11 +170,9 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service bg-color-base" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/icon-antrian.png')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/antrian-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 50px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4 class="color-white">Antrian Online</h4>
-                                    <h5 class="color-white">Antrian Layanan Konsultasi Izin</h5>
+                                <div class="service-info" style="text-align: center;">
                                     <p class="color-white margin-b-5">Silahkan antri konsultasi izin anda disini</p>
                                 </div>
                                 <a href="{{url('antrianonline')}}" class="content-wrapper-link"></a>    
@@ -144,11 +181,9 @@
                         <div class="col-sm-4">
                             <div class="service" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/icon-undagi.png')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/undagi-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4>UNDAGI</h4>
-                                    <h5>Unit Desain Arsitektur Gratis</h5>
+                                <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Dapatkan desain rumahmu GRATIS!!</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
@@ -161,11 +196,10 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service bg-color-base" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/badungkecil2.png')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/badungkecil2.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4 class="color-white">SIMPONIE</h4>
-                                    <h5 class="color-white">Sistem Informasi Manajemen Perizinan Online</h5>
+                                <div class="service-info" style="text-align: center;">
+                                    <h5 class="color-white">Sistem Informasi Manajemen Perizinan Online (SIMPONIE)</h5>
                                     <p class="color-white margin-b-5">Gunakan SIMPONIE (SIUP dan TDP)</p>
                                 </div>
                                 <a href="http://simponie.badungkab.go.id/simponiebadungkab/" class="content-wrapper-link"></a>    
@@ -174,11 +208,10 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/bkpm.jpg')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/bkpm.jpg')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4>BKPM SPIPISE</h4>
-                                    <h5>Sistem Pelayanan Informasi dan Perizinan Investasi Secara Elektronik</h5>
+                                <div class="service-info" style="text-align: center;">
+                                    <h5>Sistem Pelayanan Informasi dan Perizinan Investasi Secara Elektronik (SPIPISE)</h5>
                                     <p class="margin-b-5">Gunakan SPIPISE (Izin Prinsip PMA dan PMDN)</p>
                                 </div>
                                 <a href="http://online-spipise.bkpm.go.id" class="content-wrapper-link"></a>    
@@ -187,11 +220,9 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service bg-color-base" data-height="height">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/laperon.png')}}" alt="Asentus Logo" style="height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/laperon-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
-                                <div class="service-info">
-                                    <h4 class="color-white">LAPERON</h4>
-                                    <h5 class="color-white">Layanan Perizinan Online</h5>
+                                <div class="service-info" style="text-align: center;">
                                     <p class="color-white margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
                                 </div>
                                 <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/login.php" class="content-wrapper-link"></a>    

@@ -25,7 +25,7 @@
             <div class="box-body chat">
               <!-- chat item -->
               <div class="item">
-                <img src="{{asset('assets/dist/img/user2-160x160b.jpg')}}" alt="user image" class="online">
+                <img src="{{asset('assets/dist/img/bigoss/icon-bigoss.png')}}" alt="user image" class="online">
 
                 <p class="message">
                   <a href="#" class="name">
@@ -37,10 +37,10 @@
                 </p>
                 @if($lap->tanggapan_by != null)
                 <div class="attachment">
-                  <h4>Attachments:</h4>
+                  <h4>Oleh: {{$lap->penanggap->nama}}</h4>
 
                   <p>
-                    
+                    {{$lap->tanggapan}}
                   </p>
                 </div>
                 @endif
