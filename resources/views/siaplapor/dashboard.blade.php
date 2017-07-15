@@ -25,6 +25,81 @@
           <!-- Chat box -->
           <div class="box box-danger">
             <div class="box-header">
+              <i class="fa fa-question-circle"></i>
+              <h3 class="box-title">Kontak SIAPLapor</h3>
+            </div>
+            <div class="box-body">
+              <h4>Adukan dan Laporkan keluhan, kritik, dan saran anda kepada kami melalui aplikasi SIAPLapor atau pada kontak dibawah ini</h4>
+              <br>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="box box-warning box-solid">
+                    <div class="box-header with-border">
+                      <i class="fa fa-envelope"></i>
+                      <h3 class="box-title">Email</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                      <a href="mailto:dpmptspbadungkab@gmail.com">dpmptspbadungkab@gmail.com</a>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-warning box-solid">
+                    <div class="box-header with-border">
+                      <i class="fa fa-phone"></i>
+                      <h3 class="box-title">Telepon</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                      Telp : <a href="tel:+623614715259"><b>0361-4715259</b></a><br>Fax: <a href="tel:+623614715258"><b>0361-4715258</b></a>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-warning box-solid">
+                    <div class="box-header with-border">
+                      <i class="fa fa-comments-o"></i>
+                      <h3 class="box-title">WhatApp</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                      
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-warning box-solid">
+                    <div class="box-header with-border">
+                      <i class="fa fa-question-circle"></i>
+                      <h3 class="box-title">Lainnya</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                      
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+              </div>
+            </div>
+            <!-- /.chat -->
+          </div>
+          <!-- /.box (chat box) -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Chat box -->
+          <div class="box box-danger">
+            <div class="box-header">
               <i class="fa fa-comments-o"></i>
 
               <h3 class="box-title">Laporan Terbaru</h3>

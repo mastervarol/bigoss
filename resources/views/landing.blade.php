@@ -157,7 +157,7 @@
                     </div>
                     <div class="row row-space-2 margin-b-4">
                         <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
                                     <img class="service-icon" src="{{asset('feassets/img/bigoss/siaplapor-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
@@ -168,18 +168,18 @@
                             </div>
                         </div>
                         <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service bg-color-base" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
                                     <img class="service-icon" src="{{asset('feassets/img/bigoss/antrian-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 50px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
-                                    <p class="color-white margin-b-5">Silahkan antri konsultasi izin anda disini</p>
+                                    <p class="margin-b-5">Silahkan antri konsultasi izin anda disini</p>
                                 </div>
                                 <a href="{{url('antrianonline')}}" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="service" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
                                     <img class="service-icon" src="{{asset('feassets/img/bigoss/undagi-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
@@ -194,19 +194,18 @@
 
                     <div class="row row-space-2">
                         <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service bg-color-base" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/badungkecil2.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/simponie-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
-                                    <h5 class="color-white">Sistem Informasi Manajemen Perizinan Online (SIMPONIE)</h5>
-                                    <p class="color-white margin-b-5">Gunakan SIMPONIE (SIUP dan TDP)</p>
+                                    <p class="margin-b-5">Gunakan SIMPONIE (SIUP dan TDP)</p>
                                 </div>
                                 <a href="http://simponie.badungkab.go.id/simponiebadungkab/" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                         <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
                                     <img class="service-icon" src="{{asset('feassets/img/bigoss/bkpm.jpg')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
@@ -218,12 +217,12 @@
                             </div>
                         </div>
                         <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service bg-color-base" data-height="height">
+                            <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
                                     <img class="service-icon" src="{{asset('feassets/img/bigoss/laperon-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
-                                    <p class="color-white margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
+                                    <p class="margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
                                 </div>
                                 <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/login.php" class="content-wrapper-link"></a>    
                             </div>

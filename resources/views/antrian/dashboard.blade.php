@@ -81,28 +81,32 @@
       <div class="col-md-4">
         <!-- Info Boxes Style 2 -->
         <div class="info-box bg-yellow">
-          <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+          <span class="info-box-icon"><i class="fa fa-ticket"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Antrian Tersisa Hari Ini</span>
-            <span class="info-box-number">30</span>
+            <span class="info-box-text">Antrian Online Terlayani</span>
+            <span class="info-box-number">{{$rekap->hantrianterlayani}} Terlayani</span>
 
             <div class="progress">
-              <div class="progress-bar" style="width: 50%"></div>
+              @if($rekap->hantrianterlayani != 0 && $rekap->htotalantrian != 0)
+              <div class="progress-bar" style="width: {{($rekap->hantrianterlayani/$rekap->htotalantrian)*100}}%"></div>
+              @else
+              <div class="progress-bar" style="width: 100%"></div>
+              @endif
             </div>
             <span class="progress-description">
-                  30/60 nomor antrian telah dilayani
+                  {{$rekap->hantrianterlayani}} dari {{$rekap->htotalantrian}} telah dilayani
                 </span>
           </div>
           <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
         <div class="info-box bg-green">
-          <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
+          <span class="info-box-icon"><i class="fa fa-desktop"></i></span>
 
           <div class="info-box-content">
             <span class="info-box-text">Jumlah Loket Beroperasi</span>
-            <span class="info-box-number">4</span>
+            <span class="info-box-number">{{$rekap->loket}} Loket</span>
 
             {{-- <div class="progress">
               <div class="progress-bar" style="width: 20%"></div>
@@ -117,28 +121,28 @@
       </div>
       <div class="col-md-4">
         <div class="info-box bg-red">
-          <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>
+          <span class="info-box-icon"><i class="fa fa-ticket"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Antrian Tersisa Besok</span>
-            <span class="info-box-number">45</span>
+            <span class="info-box-text">Antrian Online Besok</span>
+            <span class="info-box-number">{{$rekap->antrianbesok}} Terambil</span>
 
             <div class="progress">
-              <div class="progress-bar" style="width: 25%"></div>
+              <div class="progress-bar" style="width: {{($rekap->antrianbesok/$rekap->jumlahantrianbesok)*100}}%"></div>
             </div>
             <span class="progress-description">
-                  45 dari 60 nomor antrian 
+                  {{$rekap->antrianbesok}} dari {{$rekap->jumlahantrianbesok}} terambil
                 </span>
           </div>
           <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
         <div class="info-box bg-aqua">
-          <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
+          <span class="info-box-icon"><i class="fa fa-paperclip"></i></span>
 
           <div class="info-box-content">
             <span class="info-box-text">Jumlah Layanan</span>
-            <span class="info-box-number">4 Layanan</span>
+            <span class="info-box-number">{{$rekap->layanan}} Layanan</span>
 
             {{-- <div class="progress">
               <div class="progress-bar" style="width: 40%"></div>

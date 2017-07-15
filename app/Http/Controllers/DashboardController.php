@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Antrian;
 use App\Laporan;
+use App\Loket;
+use App\Layanan;
 use Carbon\Carbon;
 use Auth;
 use DB;
@@ -19,6 +21,40 @@ class DashboardController extends Controller
 
     public function indexantrian()
     {
+        $hariini = Carbon::today();
+        $rekap = new \stdClass;
+        $rekap->hantrianterlayani = Antrian::where('status', 2)->where(DB::raw('date(tgl)'), $hariini->toDateString())->count();
+        $rekap->htotalantrian = Antrian::where(DB::raw('date(tgl)'), $hariini->toDateString())->count();
+        
+        $loket = Loket::all();
+        $rekap->loket = $loket->count();
+        $rekap->layanan = Layanan::all()->count();
+
+        //cek jumlah antrian tersedia besok
+        $besok = Carbon::today()->addDay();
+        while($besok->isWeekend())
+        {
+            $besok->addDay();
+        }
+
+        if($besok->dayOfWeek < 5)
+        {
+            $menitsesi = 210 + 165;
+        }
+        else
+        {
+            $menitsesi = 210;
+        }
+
+        $jumlahantrian = 0;
+
+        foreach ($loket as $lok) {
+            $jumlahantrian = $jumlahantrian + floor($menitsesi/$lok->layanan[0]->durasi_layanan);
+        }
+
+        $rekap->jumlahantrianbesok = $jumlahantrian;
+        $rekap->antrianbesok = Antrian::where(DB::raw('date(tgl)'), $besok->toDateString())->count();
+
         if(Auth::user() != null)
         {
             $antrian = Antrian::with('pemohon', 'loket', 'layanan', 'layanan.izin')
@@ -27,15 +63,16 @@ class DashboardController extends Controller
             ->where(DB::raw('date(tgl)'), '<=', Carbon::today()->addDay())
             ->first();
 
-            //return json_encode($antrian);
             return view('antrian.dashboard')->with(array(
-            'antrian' => $antrian
+            'antrian' => $antrian,
+            'rekap' => $rekap
             ));
         }
         else
         {
             return view('antrian.dashboard')->with(array(
-            'antrian' => null
+            'antrian' => null,
+            'rekap' => $rekap
             ));
         }
     }
