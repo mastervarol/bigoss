@@ -3,11 +3,31 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8"/>
-        <title>BIGOSS</title>
+        <title>BIGOSS - Bali Investment Gateway Online Services System</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="" name="description"/>
-        <meta content="" name="author"/>
+        <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
+        <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, antrian online">
+        <meta name="author" content="Ganesha">
+
+        <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />
+        <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{asset('favicon/apple-icon-60x60.png')}}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{asset('favicon/apple-icon-72x72.png')}}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{asset('favicon/apple-icon-76x76.png')}}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{asset('favicon/apple-icon-114x114.png')}}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{asset('favicon/apple-icon-120x120.png')}}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{asset('favicon/apple-icon-144x144.png')}}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{asset('favicon/apple-icon-152x152.png')}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon/apple-icon-180x180.png')}}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{asset('favicon/android-icon-192x192.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{asset('favicon/favicon-96x96.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{asset('favicon/manifest.json')}}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{asset('favicon/ms-icon-144x144.png')}}">
+        <meta name="theme-color" content="#ffffff">
 
         <!-- GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
@@ -79,10 +99,10 @@
                         </button>
 
                         <!-- Logo -->
-                        <div class="logo img-responsive" style="max-width: 350px; width: 350px;">
+                        <div class="logo img-responsive" style="max-width: 300px; width: 300px;">
                             <a class="logo-wrap img-responsive" href="#body">
-                                <img class="logo-img logo-img-main img-responsive" src="{{asset('feassets/img/dpm4-putih.png')}}" alt="Asentus Logo" style="max-width: 350px; width: 350px;">
-                                <img class="logo-img logo-img-active img-responsive" src="{{asset('feassets/img/dpm4-hitam.png')}}" alt="Asentus Logo" style="max-width: 350px; width: 350px;">
+                                <img class="logo-img logo-img-main img-responsive" src="{{asset('feassets/img/dpm4-putih.png')}}" alt="Asentus Logo" style="max-width: 300px; width: 300px;">
+                                <img class="logo-img logo-img-active img-responsive" src="{{asset('feassets/img/dpm4-hitam.png')}}" alt="Asentus Logo" style="max-width: 300px; width: 300px;">
                             </a>
                         </div>
                         <!-- End Logo -->
@@ -159,7 +179,7 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/siaplapor-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/siaplapor-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Ajukan kritik dan saran anda kepada kami</p>
@@ -170,7 +190,7 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/antrian-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 50px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/antrian-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 50px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Silahkan antri konsultasi izin anda disini</p>
@@ -181,7 +201,7 @@
                         <div class="col-sm-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/undagi-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/undagi-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Dapatkan desain rumahmu GRATIS!!</p>
@@ -196,7 +216,7 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/simponie-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/simponie-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Gunakan SIMPONIE (SIUP dan TDP)</p>
@@ -207,7 +227,7 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/bkpm.jpg')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/bkpm.jpg')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <h5>Sistem Pelayanan Informasi dan Perizinan Investasi Secara Elektronik (SPIPISE)</h5>
@@ -219,12 +239,12 @@
                         <div class="col-sm-4 sm-margin-b-4">
                             <div class="service" data-height="height" style="background-color: #ECECEC;">
                                 <div class="service-element">
-                                    <img class="service-icon" src="{{asset('feassets/img/bigoss/laperon-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; height: 75px;">
+                                    <img class="service-icon img-responsive" src="{{asset('feassets/img/bigoss/laperon-new.png')}}" alt="Asentus Logo" style="margin-left: auto; margin-right: auto; max-height: 75px;">
                                 </div>
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
                                 </div>
-                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/login.php" class="content-wrapper-link"></a>    
+                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/home.php" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                     </div>
