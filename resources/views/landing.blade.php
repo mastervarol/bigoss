@@ -9,6 +9,7 @@
         <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
         <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, antrian online">
         <meta name="author" content="Ganesha">
+        <meta name="google-site-verification" content="GpuZhfMDlSxTRi9kTEOjKawfZl2pH7zwcDy2DFWUdNk" />
 
         <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />
         <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
@@ -149,6 +150,17 @@
             }
             
         </style>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-102682770-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </head>
     <!-- END HEAD -->
 
@@ -233,6 +245,7 @@
                                <li>LAPERON (Layanan Perizinan Online)</li> 
                             </ul>
                         </p>
+                        <br>
                         <h2>Tujuan BIGOSS</h2>
                         <p>Tujuan dibangunnya sistem ini adalah untuk membantu masyarakat dalam mendapatkan pelayanan 
                             secara efektif dan juga petugas pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu 
