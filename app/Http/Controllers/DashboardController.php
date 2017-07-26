@@ -60,7 +60,8 @@ class DashboardController extends Controller
             $antrian = Antrian::with('pemohon', 'loket', 'layanan', 'layanan.izin')
             ->where('status', 1)
             ->where('id_user', Auth::user()->id_user)
-            ->where(DB::raw('date(tgl)'), '<=', Carbon::today()->addDay())
+            ->where(DB::raw('date(tgl)'), '>=', Carbon::today())
+            ->orderBy('tgl', 'asc')
             ->first();
 
             return view('antrian.dashboard')->with(array(
