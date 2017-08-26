@@ -116,21 +116,21 @@
             <i class="fa fa-arrow-left"></i> <span>BIGOSS</span>
           </a>
         </li>
-        <li class="header">MENU SIAPLAPOR</li>
+        <li class="header">MENU UNDAGI</li>
         <li id="beranda-menu">
-          <a href="{{url('siaplapor')}}">
+          <a href="{{url('undagi')}}">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
         @if(Auth::user() != null)
-        <li id="lapor-menu">
-          <a href="{{url('siaplapor/pelaporan')}}">
-            <i class="fa fa-dashboard"></i> <span>Laporkan Pelayanan</span>
+        <li id="permohonan-menu">
+          <a href="{{url('undagi/permohonan')}}">
+            <i class="fa fa-dashboard"></i> <span>Permohonan Online</span>
           </a>
         </li>
-        <li id="lapor-menu">
-          <a href="{{url('siaplapor/laporansaya')}}">
-            <i class="fa fa-dashboard"></i> <span>Laporan Saya</span>
+        <li id="permohonansaya-menu">
+          <a href="{{url('undagi/permohonansaya')}}">
+            <i class="fa fa-dashboard"></i> <span>Permohonan Saya</span>
           </a>
         </li>
         @endif  

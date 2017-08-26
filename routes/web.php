@@ -36,8 +36,9 @@ Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
 	Route::get('/laporansaya', 'LaporanController@laporansaya');
 });
 
-Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
-	
+Route::group(['prefix' => 'undagi', 'middleware' => ['auth']], function () {
+	Route::get('/permohonan', 'UndagiController@permohonan');
+	Route::post('/permohonan', 'UndagiController@storepermohonan');
 });
 
 Auth::routes();
