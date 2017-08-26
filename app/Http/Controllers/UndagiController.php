@@ -97,7 +97,7 @@ class UndagiController extends Controller
 			}
 		}
 
-		Mail::to($userlogin->email)->send(new TiketPermohonanUndagi($mohon));
+		Mail::to($mohon->pemohon->email)->send(new TiketPermohonanUndagi($mohon));
 
         return redirect('undagi');
         Session::flash('msgsave', 'Pendaftaran permohonan berhasil');
