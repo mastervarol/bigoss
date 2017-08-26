@@ -21,7 +21,7 @@ class Permohonan extends Model
         'tgl_ajb' => 'required',
         'an_ajb' => 'required|max:100',
         'letak_ajb' => 'required|max:255',
-        'luas_ajb' => 'required|max:10',
+        'luas_ajb' => 'required|numeric',
         'doc_ktp' => 'required|file',
         'doc_itr' => 'required|file',
         'doc_shm' => 'required|file',

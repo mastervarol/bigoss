@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Permohonan;
 
-class TiketPermohonanUndagi extends Mailable
+class ResponseUndagi extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -36,6 +36,6 @@ class TiketPermohonanUndagi extends Mailable
      */
     public function build()
     {
-        return $this->view('email.emailundagi');
+        return $this->view('email.emailresponseundagi');
     }
 }
