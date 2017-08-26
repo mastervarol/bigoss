@@ -6,8 +6,6 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\Registered;
 
 class RegisterController extends Controller
 {
@@ -50,7 +48,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nik' => 'required|string|digits:16|unique:m_user',
+            'nik' => 'required|string|digits:16',
             'nama' => 'required|string|max:100',
             'email' => 'required|string|email|max:100|unique:m_user',
             'password' => 'required|string|min:6|confirmed',
@@ -65,15 +63,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
+        return User::create([
             'nik' => $data['nik'],
             'nama' => $data['nama'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-
-        Mail::to($user->email)->send(new Registered($user));
-
-        return $user;
     }
 }

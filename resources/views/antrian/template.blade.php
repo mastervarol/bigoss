@@ -66,6 +66,7 @@
     ga('send', 'pageview');
 
   </script>
+<meta name="google-site-verification" content="GpuZhfMDlSxTRi9kTEOjKawfZl2pH7zwcDy2DFWUdNk" />
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
