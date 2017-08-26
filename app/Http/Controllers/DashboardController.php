@@ -91,6 +91,11 @@ class DashboardController extends Controller
             ));
     }
 
+    public function indexundagi()
+    {
+        return view('undagi.dashboard');
+    }
+
     public function meong()
     {
         //Mail::to("dani.akbarr@gmail.com")->send(new TiketAntrian(new Antrian));

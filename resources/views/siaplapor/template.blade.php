@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIAPLapor - Badung Investment Gateway Online Services System</title>
-  <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
-  <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, antrian online">
+  <meta name="description" content="Aplikasi Sistem Informasi Aspirasi Pengaduan dan Laporan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
+  <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, laporan, pengaduan">
   <meta name="author" content="Ganesha">
 
   <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />

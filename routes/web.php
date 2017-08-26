@@ -14,6 +14,7 @@
 Route::get('/', 'DashboardController@index');
 Route::get('/antrianonline', 'DashboardController@indexantrian');
 Route::get('/siaplapor', 'DashboardController@indexsiaplapor');
+Route::get('/undagi', 'DashboardController@indexundagi');
 
 Route::group(['prefix' => 'antrianonline', 'middleware' => ['auth']], function () {
 	Route::get('/pendaftaran', 'AntrianController@pendaftaran');
@@ -33,6 +34,10 @@ Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
 	Route::post('/pelaporan', 'LaporanController@storepelaporan');
 
 	Route::get('/laporansaya', 'LaporanController@laporansaya');
+});
+
+Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
+	
 });
 
 Auth::routes();
