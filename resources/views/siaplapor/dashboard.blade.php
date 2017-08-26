@@ -3,6 +3,12 @@
 @section('content')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <div class="container-fluid">
+       <div class="row">
+      <img src="{{asset('assets/dist/img/siap-lapor-header.jpg')}}" class="img-responsive">
+       </div>
+    </div>
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>

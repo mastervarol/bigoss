@@ -3,7 +3,7 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8"/>
-        <title>BIGOSS - Bali Investment Gateway Online Services System</title>
+        <title>BIGOSS - Badung Investment Gateway Online Services System</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
@@ -343,7 +343,7 @@
                                     <p class="margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
                                     
                                 </div>
-                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/login.php" target="_blank" class="content-wrapper-link"></a>    
+                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/register.php" target="_blank" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                     </div>

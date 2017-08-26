@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Antrian Online - Bali Investment Gateway Online Services System</title>
+  <title>Antrian Online - Badung Investment Gateway Online Services System</title>
   <meta name="description" content="Antrian online layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
   <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, antrian, online, izin, imb">
   <meta name="author" content="Ganesha">

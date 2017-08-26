@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIAPLapor - Bali Investment Gateway Online Services System</title>
+  <title>SIAPLapor - Badung Investment Gateway Online Services System</title>
   <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
   <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, antrian online">
   <meta name="author" content="Ganesha">
@@ -77,7 +77,8 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><img src="{{asset('assets/dist/img/bigoss/icon-siaplapor.png')}}" style="width: 40px; height: 40px;"></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 40px;"></span>
+      <span class="logo-lg visible-lg visible-md visible-sm"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 30px;"></span>
+      <span class="logo-lg hidden-lg hidden-md hidden-sm"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 40px;"></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->

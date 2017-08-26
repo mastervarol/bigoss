@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Antrian;
 use App\Laporan;
 use App\Loket;
+use App\User;
 use App\Layanan;
 use Carbon\Carbon;
 use Auth;
@@ -49,7 +50,10 @@ class DashboardController extends Controller
         $jumlahantrian = 0;
 
         foreach ($loket as $lok) {
-            $jumlahantrian = $jumlahantrian + floor($menitsesi/$lok->layanan[0]->durasi_layanan);
+            if($lok->layanan->count() != 0)
+            {
+                $jumlahantrian = $jumlahantrian + floor($menitsesi/$lok->layanan[0]->durasi_layanan);
+            }
         }
 
         $rekap->jumlahantrianbesok = $jumlahantrian;
@@ -90,8 +94,8 @@ class DashboardController extends Controller
     public function meong()
     {
         //Mail::to("dani.akbarr@gmail.com")->send(new TiketAntrian(new Antrian));
-        $antrian = Antrian::find(11);
+        $pemohon = User::find(2);
         //return json_encode($antrian);
-        return view('email.email1')->with('antrian', $antrian);
+        return view('email.register')->with('pemohon', $pemohon);
     }
 }

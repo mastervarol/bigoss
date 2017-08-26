@@ -335,14 +335,14 @@
         <table cellspacing="0" cellpadding="0" width="600" class="w320">
           <tr>
             <td class="header-lg">
-              e-Tiket Antrian Online
+              Pendaftaran Akun BIGOSS
             </td>
           </tr>
           <tr>
             <td class="free-text">
-              Terima kasih telah menggunakan layanan antrian online kami.
+              Terima kasih telah mendaftar pada layanan kami.
               <br>
-              Ayo urus sendiri Izin anda. JANGAN PAKAI CALO!!!
+              Anda dapat menggunakan akun ini pada layanan Antrian Online dan SIAPLapor.
             </td>
           </tr>
           <tr>
@@ -353,22 +353,14 @@
                     <table cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 30px;">
-                          Pemohon ke : <strong>{{$antrian->nomor}}</strong><br>
-                          NIK : <strong>{{$antrian->pemohon->nik}}</strong><br>
-                          Loket : <strong>{{$antrian->loket->loket}}</strong><br>
-                          Layanan : <strong>{{$antrian->layanan->layanan}}</strong><br>
-                          Tgl Antrian : <strong>{{$antrian->tgl}}</strong>
+                          NIK : <strong>{{$pemohon->nik}}</strong><br>
+                          Email : <strong>{{$pemohon->email}}</strong><br>
+                          Nama : <strong>{{$pemohon->nama}}</strong><br>
                         </td>
                       </tr>
                       <tr>
-                        <td class="code-block">
-                          Kode Token Anda<br>
-                          -- {{$antrian->token}} --
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="button">
-                          Harap tidak memberikan tip atau hadiah dalam bentuk apapun kepada petugas kami untuk mewujudkan Pemerintah Kabupaten Badung yang bersih dan bebas KKN.
+                        <td>
+                          Gunakan selalu Aplikasi BIGOSS demi kenyamanan bersama.
                         </td>
                       </tr>
                       <tr>
