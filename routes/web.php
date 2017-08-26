@@ -14,13 +14,15 @@
 Route::get('/', 'DashboardController@index');
 Route::get('/antrianonline', 'DashboardController@indexantrian');
 Route::get('/siaplapor', 'DashboardController@indexsiaplapor');
+Route::get('/undagi', 'DashboardController@indexundagi');
+//Route::get('/undagi/meong', 'DashboardController@meong');
 
 Route::group(['prefix' => 'antrianonline', 'middleware' => ['auth']], function () {
 	Route::get('/pendaftaran', 'AntrianController@pendaftaran');
 	Route::post('/pendaftaran', 'AntrianController@storependaftaran');
 	Route::get('/riwayat', 'AntrianController@riwayat');
 
-	Route::get('/meong', 'DashboardController@meong');
+	//Route::get('/meong', 'DashboardController@meong');
 
 	//ajax
 	Route::get('/ajax_layanan/{idizin}', 'AntrianController@ajax_layanan');
@@ -33,6 +35,11 @@ Route::group(['prefix' => 'siaplapor', 'middleware' => ['auth']], function () {
 	Route::post('/pelaporan', 'LaporanController@storepelaporan');
 
 	Route::get('/laporansaya', 'LaporanController@laporansaya');
+});
+
+Route::group(['prefix' => 'undagi', 'middleware' => ['auth']], function () {
+	Route::get('/permohonan', 'UndagiController@permohonan');
+	Route::post('/permohonan', 'UndagiController@storepermohonan');
 });
 
 Auth::routes();

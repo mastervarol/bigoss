@@ -302,7 +302,7 @@
                                 <div class="service-info" style="text-align: center;">
                                     <p class="margin-b-5">Dapatkan desain rumahmu GRATIS!!</p>
                                 </div>
-                                <a href="#" class="content-wrapper-link"></a>    
+                                <a href="{{url('undagi')}}" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                     </div>

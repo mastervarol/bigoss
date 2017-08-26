@@ -9,6 +9,7 @@ use App\Laporan;
 use App\Loket;
 use App\User;
 use App\Layanan;
+use App\Permohonan;
 use Carbon\Carbon;
 use Auth;
 use DB;
@@ -91,11 +92,16 @@ class DashboardController extends Controller
             ));
     }
 
+    public function indexundagi()
+    {
+        return view('undagi.dashboard');
+    }
+
     public function meong()
     {
         //Mail::to("dani.akbarr@gmail.com")->send(new TiketAntrian(new Antrian));
-        $pemohon = User::find(2);
+        $mohon = Permohonan::find(2);
         //return json_encode($antrian);
-        return view('email.register')->with('pemohon', $pemohon);
+        return view('email.emailundagi')->with('permohonan', $mohon);
     }
 }
