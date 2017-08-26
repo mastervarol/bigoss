@@ -235,13 +235,22 @@
                                <li>LAPERON (Layanan Perizinan Online)</li> 
                             </ul>
                         </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="img-responsive" style="width:100%; display:inline-block;" src="{{asset('feassets/img/bigoss-app_2.jpg')}}" >
+                    </div>
+                </div>
+                <div class="row margin-b-40">
+                    <div class="col-sm-6">                    
                         <h2>Tujuan BIGOSS</h2>
                         <p>Tujuan dibangunnya sistem ini adalah untuk membantu masyarakat dalam mendapatkan pelayanan 
                             secara efektif dan juga petugas pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu 
                             Kabupaten Badung untuk menangani beberapa proses yang berkaitan dengan manajemen perizinan</p>
                     </div>
                     <div class="col-sm-6">
-                        <img class="img-responsive" style="width:100%; display:inline-block;" src="{{asset('feassets/img/bigoss-app_2.jpg')}}" >
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SBP_SykbRgU" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <!--// end row -->
@@ -332,7 +341,7 @@
                                     <p class="margin-b-5">Gunakan LAPERON (ITR, IMB, Izin Gangguan, TDUP, dan SIUP-MB)</p>
                                     
                                 </div>
-                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/register.php" target="_blank" class="content-wrapper-link"></a>    
+                                <a href="http://simaniz.dpmptsp.badungkab.go.id/newperizinan/search.php" target="_blank" class="content-wrapper-link"></a>    
                             </div>
                         </div>
                     </div>
