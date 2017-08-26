@@ -128,11 +128,11 @@
             <i class="fa fa-dashboard"></i> <span>Permohonan Online</span>
           </a>
         </li>
-        <li id="permohonansaya-menu">
+        {{-- <li id="permohonansaya-menu">
           <a href="{{url('undagi/permohonansaya')}}">
             <i class="fa fa-dashboard"></i> <span>Permohonan Saya</span>
           </a>
-        </li>
+        </li> --}}
         @endif  
         <li class="header">OPTION</li>
         @if(Auth::user() != null)
