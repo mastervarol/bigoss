@@ -105,8 +105,8 @@ class AntrianController extends Controller
 
         Mail::to($userlogin->email)->send(new TiketAntrian($antrian));
 
-        return redirect('antrianonline');
         Session::flash('msgsave', 'Pendaftaran antrian berhasil');
+        return redirect('antrianonline');
     }   
 
     public function riwayat()

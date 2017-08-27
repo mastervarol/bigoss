@@ -50,7 +50,6 @@ class UndagiController extends Controller
         $mohon->save();
 
 
-
         if ($request->file('doc_ktp')->isValid()) {
 		    $ktp = $mohon->id_permohonan . '.' . $request->file('doc_ktp')->getClientOriginalExtension();
 
@@ -99,7 +98,7 @@ class UndagiController extends Controller
 
 		Mail::to($mohon->pemohon->email)->send(new TiketPermohonanUndagi($mohon));
 
+		Session::flash('msgsave', 'Pendaftaran permohonan berhasil');
         return redirect('undagi');
-        Session::flash('msgsave', 'Pendaftaran permohonan berhasil');
     }
 }

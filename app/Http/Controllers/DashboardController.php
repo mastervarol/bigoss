@@ -99,9 +99,6 @@ class DashboardController extends Controller
 
     public function meong()
     {
-        //Mail::to("dani.akbarr@gmail.com")->send(new TiketAntrian(new Antrian));
-        $mohon = Permohonan::find(2);
-        //return json_encode($antrian);
-        return view('email.emailundagi')->with('permohonan', $mohon);
+        //return env('PATH_PERMOHONAN');
     }
 }

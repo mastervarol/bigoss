@@ -22,10 +22,10 @@ class Permohonan extends Model
         'an_ajb' => 'required|max:100',
         'letak_ajb' => 'required|max:255',
         'luas_ajb' => 'required|numeric',
-        'doc_ktp' => 'required|file',
-        'doc_itr' => 'required|file',
-        'doc_shm' => 'required|file',
-        'doc_kuasa' => 'file'
+        'doc_ktp' => 'required|file|mimes:pdf',
+        'doc_itr' => 'required|file|mimes:pdf',
+        'doc_shm' => 'required|file|mimes:pdf',
+        'doc_kuasa' => 'file|mimes:pdf'
     );
 
     public function pemohon()
