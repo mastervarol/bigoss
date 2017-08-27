@@ -122,6 +122,11 @@
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
+        <li id="gallery-menu">
+          <a href="{{url('undagi/gallery')}}">
+            <i class="fa fa-photo"></i> <span>Gallery</span>
+          </a>
+        </li>
         @if(Auth::user() != null)
         <li id="permohonan-menu">
           <a href="{{url('undagi/permohonan')}}">

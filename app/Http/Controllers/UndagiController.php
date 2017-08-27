@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Log;
 
 class UndagiController extends Controller
 {
+	public function gallery()
+    {
+        return view('undagi.gallery');
+    }
+
     public function permohonan()
     {
         return view('undagi.permohonan');

@@ -42,7 +42,7 @@
           <div class="box box-danger">
             <div class="box-header">
               <i class="fa fa-question-circle"></i>
-              <h3 class="box-title">Kontak SIAPLapor</h3>
+              <h3 class="box-title">Kontak UNDAGI</h3>
             </div>
             <div class="box-body">
             </div>
