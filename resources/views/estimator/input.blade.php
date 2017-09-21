@@ -380,13 +380,13 @@
                         <div class="radio">
                           <label>
                             <input type="radio" name="rbasement" value="1" class="flat-red" checked>
-                            &nbsp Ya
+                            &nbsp Tidak
                           </label>
                         </div>
                         <div class="radio">
                           <label>
                             <input type="radio" name="rbasement" value="2" class="flat-red">
-                            &nbsp Tidak
+                            &nbsp Ya
                           </label>
                         </div>
                       </div>
