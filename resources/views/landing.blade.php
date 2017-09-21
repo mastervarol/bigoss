@@ -8,7 +8,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta name="description" content="Satu akses layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
         <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, antrian online">
-        <meta name="author" content="Ganesha">
+        <meta name="author" content="Agus D. Nugraha">
 
         <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />
         <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">

@@ -6,7 +6,7 @@
   <title>Antrian Online - Badung Investment Gateway Online Services System</title>
   <meta name="description" content="Aplikasi Antrian Online layanan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
   <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, antrian, online, izin, imb">
-  <meta name="author" content="Ganesha">
+  <meta name="author" content="Agus D. Nugraha">
 
   <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />
   <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">

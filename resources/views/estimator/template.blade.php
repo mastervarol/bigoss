@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIAPLapor - Badung Investment Gateway Online Services System</title>
-  <meta name="description" content="Aplikasi Sistem Informasi Aspirasi Pengaduan dan Laporan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
-  <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, siaplapor, laporan, pengaduan">
+  <title>Estimator Retribusi - Badung Investment Gateway Online Services System</title>
+  <meta name="description" content="Aplikasi penghitung estimasi biaya retribusi IMB pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Pemerintahan Kabupaten Badung">
+  <meta name="keywords" content="Badung, BIGOSS, dpmptsp, layanan, perizinan, kalkulator, estimasi, retribusi, IMB">
   <meta name="author" content="Agus D. Nugraha">
 
   <link rel="icon" type="image/png" href="{{asset('favicon.png')}}" />
@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="{{asset('assets/dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{asset('assets/dist/css/skins/skin-yellow.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/dist/css/skins/skin-blue.min.css')}}">
 
   <!-- jQuery 3.1.1 -->
   <script src="{{asset('assets/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
@@ -68,7 +68,7 @@
   </script>
 <meta name="google-site-verification" content="GpuZhfMDlSxTRi9kTEOjKawfZl2pH7zwcDy2DFWUdNk" />
 </head>
-<body class="hold-transition skin-yellow sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -76,10 +76,10 @@
     <!-- Logo -->
     <a href="{{url('admin/')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><img src="{{asset('assets/dist/img/bigoss/icon-siaplapor.png')}}" style="width: 40px; height: 40px;"></span>
+      <span class="logo-mini">E<b>R</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg visible-lg visible-md visible-sm"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 30px;"></span>
-      <span class="logo-lg hidden-lg hidden-md hidden-sm"><img src="{{asset('assets/dist/img/bigoss/siaplaporpanjang.png')}}" style="height: 40px;"></span>
+      <span class="logo-lg visible-lg visible-md visible-sm">Estimator <b>Retribusi</b></span>
+      <span class="logo-lg hidden-lg hidden-md hidden-sm">Estimator <b>Retribusi</b></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -116,26 +116,14 @@
             <i class="fa fa-arrow-left"></i> <span>BIGOSS</span>
           </a>
         </li>
-        <li class="header">MENU SIAPLAPOR</li>
-        <li id="beranda-menu">
-          <a href="{{url('siaplapor')}}">
-            <i class="fa fa-dashboard"></i> <span>Beranda</span>
+        <li class="header">MENU ESTIMATOR RETRIBUSI</li>
+        <li id="estimator-menu">
+          <a href="{{url('estimator')}}">
+            <i class="fa fa-dashboard"></i> <span>Estimator</span>
           </a>
         </li>
         @if(Auth::user() != null)
-        <li id="lapor-menu">
-          <a href="{{url('siaplapor/pelaporan')}}">
-            <i class="fa fa-dashboard"></i> <span>Laporkan Pelayanan</span>
-          </a>
-        </li>
-        <li id="lapor-menu">
-          <a href="{{url('siaplapor/laporansaya')}}">
-            <i class="fa fa-dashboard"></i> <span>Laporan Saya</span>
-          </a>
-        </li>
-        @endif  
         <li class="header">OPTION</li>
-        @if(Auth::user() != null)
         <li>
           <a href="{{ url('logout')}}"
               onclick="event.preventDefault();
@@ -146,12 +134,6 @@
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
           </form>
-        </li>
-        @else
-        <li id="riwayat-menu">
-          <a href="{{url('login')}}">
-            <i class="fa fa-user"></i> <span>Login</span>
-          </a>
         </li>
         @endif
       </ul>
